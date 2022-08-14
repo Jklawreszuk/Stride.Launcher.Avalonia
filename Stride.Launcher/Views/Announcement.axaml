@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="Stride.Launcher.Views.Announcement">
+        <Grid Background="Transparent">
+			<DockPanel Margin="80">
+			<DockPanel DockPanel.Dock="Bottom" Margin="20">
+					<Button HorizontalAlignment="Right" Content="OK" Padding="24,8" Command="{Binding CloseAnnouncementCommand}"
+							DockPanel.Dock="Right"/>
+					<CheckBox Content="Don't show me this again" VerticalAlignment="Bottom"/>
+			</DockPanel>
+			
+			</DockPanel>
+        </Grid>
+			
+</UserControl>

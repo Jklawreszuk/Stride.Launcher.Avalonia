@@ -1,0 +1,210 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Stride.Launcher.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:services="clr-namespace:Stride.Launcher.Services"
+        xmlns:r="clr-namespace:Stride.Launcher.Assets.Localization;assembly=Stride.Launcher"
+        xmlns:img="clr-namespace:Avalonia.Media.Imaging;assembly=Avalonia.Visuals"
+        xmlns:views="clr-namespace:Stride.Launcher.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1024" Height="768"
+
+        x:Class="Stride.Launcher.Views.MainWindow"
+        Icon="/Assets/img/Launcher.ico"
+        Title="{x:Static r:Strings.LauncherTitle}">
+
+        <Window.Background>
+            <ImageBrush Source="{DynamicResource ImageBackground}" Stretch="UniformToFill"/>
+        </Window.Background>
+
+        <Grid>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Bottom" Height="24" Background="{StaticResource EmphasisButtonBackground}">
+                    <Grid ColumnDefinitions="3,*,Auto">
+                        <TextBlock Grid.Column="1" Text="{Binding CurrentToolTip}"
+                   Margin="8,4" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{Binding StringFormat=Launcher v{0}, Source={x:Static services:SelfUpdater.Version}}" Margin="8,4" HorizontalAlignment="Right"
+                   VerticalAlignment="Center" />
+                    </Grid>
+                </DockPanel>
+                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}">
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="*,Auto">
+                        <DockPanel Width="400">
+                            <Border DockPanel.Dock="Bottom" BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}" Background="{StaticResource TileAlphaBackgroundBrush}">
+                                <DockPanel Margin="10">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" DockPanel.Dock="Bottom" Margin="10">
+                                    <Button Classes="TransparentButtonStyle MediaButton" Content="{StaticResource ImageTwitter}" HorizontalAlignment="Left"
+                                    Command="{Binding OpenUrlCommand}" CommandParameter="{x:Static r:Urls.Twitter}" Margin="2"/>
+                                    <Button Classes="TransparentButtonStyle MediaButton" Content="{StaticResource ImageFacebook}" HorizontalAlignment="Left"
+                                    Command="{Binding OpenUrlCommand}" CommandParameter="{x:Static r:Urls.Facebook}" Margin="2"/>
+                                    <Button Classes="TransparentButtonStyle MediaButton" Content="{StaticResource ImageReddit}" HorizontalAlignment="Left"
+                                    Command="{Binding OpenUrlCommand}" CommandParameter="{x:Static r:Urls.Reddit}" Margin="2"/>
+                                    <Button Classes="TransparentButtonStyle MediaButton" Content="{StaticResource ImageOpenCollective}" HorizontalAlignment="Left"
+                                    Command="{Binding OpenUrlCommand}" CommandParameter="{x:Static r:Urls.OpenCollective}" Margin="2"/>                                   
+                                    </StackPanel>                     
+                                    <UniformGrid Columns="2">
+                                         <Button Classes="TransparentButtonStyle" HorizontalAlignment="Left"
+                                            Command="{Binding OpenUrlCommand}"
+                                            CommandParameter="{x:Static r:Urls.Issues}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Margin="5" Source="{StaticResource ImageIssues}" Width="16" Height="16"/>
+                                                <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Text="{x:Static r:Strings.ButtonIssues}" VerticalAlignment="Center"/>
+                                            </StackPanel>              
+                                         </Button>
+                                         <Button Classes="TransparentButtonStyle" HorizontalAlignment="Left"
+                                            Command="{Binding OpenUrlCommand}"
+                                            CommandParameter="{x:Static r:Urls.Forums}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Margin="5" Source="{StaticResource ImageForums}" Width="16" Height="16"/>
+                                                <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Text="{x:Static r:Strings.ButtonForums}" VerticalAlignment="Center"/>
+                                            </StackPanel>              
+                                         </Button>
+                                         <Button Classes="TransparentButtonStyle" HorizontalAlignment="Left"
+                                            Command="{Binding OpenUrlCommand}"
+                                            CommandParameter="{x:Static r:Urls.Discord}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Margin="5" Source="{StaticResource ImageChat}" Width="16" Height="16"/>
+                                                <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Text="{x:Static r:Strings.ButtonDiscord}" VerticalAlignment="Center"/>
+                                            </StackPanel>              
+                                         </Button>
+                                         <Button Classes="TransparentButtonStyle" HorizontalAlignment="Left"
+                                            Command="{Binding OpenUrlCommand}"
+                                            CommandParameter="{x:Static r:Urls.Github}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Margin="5" Source="{StaticResource ImageGithub}" Width="16" Height="16"/>
+                                                <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Text="{x:Static r:Strings.ButtonGithub}" VerticalAlignment="Center"/>
+                                            </StackPanel>              
+                                         </Button>
+                                         <Button Classes="TransparentButtonStyle" HorizontalAlignment="Left"
+                                            Command="{Binding OpenUrlCommand}"
+                                            CommandParameter="{x:Static r:Urls.Roadmap}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Margin="5" Source="{StaticResource ImageRoadmap}" Width="16" Height="16"/>
+                                                <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" Text="{x:Static r:Strings.ButtonRoadmap}" VerticalAlignment="Center"/>
+                                            </StackPanel>              
+                                         </Button>
+                                    
+                                    </UniformGrid>
+                                </DockPanel>
+                            </Border>
+                            <DockPanel>
+                                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}" DockPanel.Dock="Top">
+                                    <StackPanel>
+                                        <Grid Height="48">
+                                            <Button Command="{Binding StartStudioCommand}" Content="Start Stride 4.2" Background="{StaticResource EmphasisButtonBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                            TextBlock.FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                                <Button.Resources>
+                                                    <SolidColorBrush x:Key="ButtonHoverBackgroundBrush" Color="{StaticResource EmphasisButtonHoverColor}"/>
+                                                </Button.Resources>
+                                            </Button>
+                                        </Grid>
+                                        <!-- <ComboBox Margin="0,4" Name="FrameworkSelector">
+                                            <ComboBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="ssss" />
+                                            </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox> -->
+                                        <CheckBox Margin="0,2" DockPanel.Dock="Bottom" Content="{x:Static r:Strings.AutoCloseLauncher}"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}" DockPanel.Dock="Top">
+                                    <DockPanel Height="32" Margin="10,0">
+                                    <Image Source="{StaticResource ImageSwitchVersion}" Width="26" Height="26" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="10,0,0,0" Text="{x:Static r:Strings.SwitchOrUpdateVersion}" FontSize="24" TextAlignment="Left" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </Border>
+                                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}" DockPanel.Dock="Bottom">
+                                    <UniformGrid Columns="2">
+                                    <ContentControl Grid.Column="0" Margin="0,0,2,0" Content="Binding VsixPackage2019"/>
+                                    <ContentControl Grid.Column="1" Margin="2,0,0,0" Content="Binding VsixPackage2022"/>
+                                    </UniformGrid>
+                                </Border>
+                                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}" DockPanel.Dock="Bottom">
+                                    <DockPanel Height="32" Margin="10,0">
+                                    <Image Source="{StaticResource ImageVisualStudio}" Width="26" Height="26" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="10,0,0,0" Text="{x:Static r:Strings.VisualStudioExtension}" FontSize="24" TextAlignment="Left" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </Border>
+                                <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}"
+                            Background="Transparent">
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalAlignment="Top">
+                                    <StackPanel>
+                                        <ItemsControl  Margin="0,-2"/>
+                                        <ProgressBar Height="24" Margin="0,2" IsIndeterminate="True" Opacity="0.5" IsVisible="False"/>
+                                        <ToggleButton Classes="TransparentButtonStyle" Margin="0,6" Content="Show betas">
+                                        <!-- <ToggleButton.ContentTemplate>
+                                            <DataTemplate>
+                                            <TextBlock x:Name="TextBlock" Text="ToggleShowBetaVersions"></TextBlock>
+                                        
+                                            </DataTemplate>                      
+                                        </ToggleButton.ContentTemplate>-->
+                                        </ToggleButton>  
+                                    </StackPanel>
+                                    </ScrollViewer>
+                                </Border>
+
+                            </DockPanel>
+                        </DockPanel>
+
+                        <Grid Grid.Column="1" ColumnDefinitions="*,*">
+                            <Border>
+                                <DockPanel>
+                                    <Border DockPanel.Dock="Top"  BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}">
+                                        <DockPanel Height="48" Margin="10,0">
+                                            <Image Source="{StaticResource ImageProjects}" Width="26" Height="26" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="10,0,0,0" Text="{x:Static r:Strings.Projects}" FontSize="24" TextAlignment="Left" VerticalAlignment="Center"/>
+                                        </DockPanel>
+                                    </Border>
+                                    <Border  BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}">
+                                     <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                     </ScrollViewer>
+                                    
+                                    </Border>
+                                </DockPanel>
+                            </Border>
+                        </Grid>
+
+                        <Grid Grid.Column="1" ColumnDefinitions="*,*">
+                            <Border Grid.Row="0" Grid.Column="1" BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileBorderThickness}">
+                                <TabControl Background="Transparent" x:Name="TabControl">
+                                    <TabItem Header="{x:Static r:Strings.TabGettingStarted}">
+                                        <ScrollViewer>
+                                            <StackPanel>
+                                                <Border Background="{StaticResource TileAlphaBackgroundBrush}">
+                                                    <TextBlock Text="{x:Static r:Strings.NoDocumentation}" FontSize="16" Margin="20" TextAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                                <ItemsControl Items="{Binding ActiveDocumentationPages}">
+                                                    <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Border BorderBrush="{StaticResource TileBorderBrush}" BorderThickness="{StaticResource TileListBorderThickness}">
+                                                        <Button Background="{StaticResource TileAlphaBackgroundBrush}" Command="{Binding OpenUrlCommand}" HorizontalContentAlignment="Stretch">
+                                                            <DockPanel Margin="5">
+                                                            <TextBlock Margin="0,3" FontSize="16" DockPanel.Dock="Top" Text="{Binding Title}" HorizontalAlignment="Left"/>
+                                                            <TextBlock Margin="0,3" Text="{Binding Description}" Foreground="{StaticResource TextBrush}" TextWrapping="Wrap"/>
+                                                            </DockPanel>
+                                                        </Button>
+                                                        </Border>
+                                                    </DataTemplate>
+                                                    </ItemsControl.ItemTemplate>
+                                                </ItemsControl>
+                                            </StackPanel>
+                                        </ScrollViewer>
+                                    </TabItem>
+                                    <TabItem Header="{x:Static r:Strings.TabNews}">
+                                    News
+                                    </TabItem>
+                                </TabControl>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </DockPanel>
+            <Border IsVisible="false">
+                <views:Announcement/>
+            </Border>
+        </Grid>
+   
+
+</Window>

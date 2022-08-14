@@ -1,0 +1,78 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Stride.Launcher"
+             x:Class="Stride.Launcher.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Bitmap x:Key="ImageBackground">
+                <x:Arguments><x:String>Assets/img/Robot.jpg</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageIssues">
+                <x:Arguments><x:String>Assets/img/issues.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageForums">
+                <x:Arguments><x:String>Assets/img/chat-16.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageChat">
+                <x:Arguments><x:String>Assets/img/discord.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageGithub">
+                <x:Arguments><x:String>Assets/img/github.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageRoadmap">
+                <x:Arguments><x:String>Assets/img/roadmap.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageSwitchVersion">
+                <x:Arguments><x:String>Assets/img/switch-version.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageVisualStudio">
+                <x:Arguments><x:String>Assets/img/visual-studio.png</x:String></x:Arguments>
+            </Bitmap>
+            <Bitmap x:Key="ImageProjects">
+                <x:Arguments><x:String>Assets/img/recent-projects.png</x:String></x:Arguments>
+            </Bitmap>
+            <Image Width="16" Height="16" x:Key="EditorIcon" Source="Assets/img/EditorIcon.png" />
+            <Image Width="16" Height="16" x:Key="ImageShowcase" Source="Assets/img/showcase.png"/>
+            <Image Width="16" Height="16" x:Key="ImageSurvey" Source="Assets/img/survey.png"/>
+            <Image Width="24" Height="24" x:Key="ImageTwitter" Source="Assets/img/twitter_bird_24.png"/>
+            <Image Width="24" Height="24" x:Key="ImageFacebook" Source="Assets/img/facebook_24.png"/>
+            <Image Width="24" Height="24" x:Key="ImageReddit" Source="Assets/img/reddit_24.png"/>
+            <Image Width="24" Height="24" x:Key="ImageOpenCollective" Source="Assets/img/opencollective-24.png"/>
+            
+            <Image Width="26" Height="26" x:Key="ImageDownload" Source="Assets/img/download-26-dark.png"/>
+            <Image Width="26" Height="26" x:Key="ImageUpdate" Source="Assets/img/update.png"/>
+            <Image Width="26" Height="26" x:Key="ImageDelete" Source="Assets/img/delete-26-dark.png"/>
+            <Image Width="16" Height="16" x:Key="ImageUpgrade" Source="Assets/img/upgrade-16.png"/>
+            <Image Width="26" Height="26" x:Key="ImageReleaseNotes" Source="Assets/img/note-26-dark.png"/>
+            <Image Width="26" Height="26" x:Key="ImageListVersions" Source="Assets/img/list-26.png"/>
+            <Thickness x:Key="TileBorderThickness">15</Thickness>
+            <SolidColorBrush x:Key="TileBorderBrush" Color="Transparent"/>
+            <SolidColorBrush x:Key="TileAlphaBackgroundBrush" Color="#C0434343"/>
+            <SolidColorBrush x:Key="EmphasisButtonBackground" Color="#900520"/>
+            
+            <Color x:Key="EmphasisButtonHoverColor">#DA0830</Color>
+            <SolidColorBrush x:Key="ThemeForegroundBrush" Color="White" />
+            
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme Mode="Dark"/>
+        <Style Selector="Button">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+        <Style Selector="Button.MediaButton:pointerover">
+            <Setter Property="Opacity" Value="0.3"/>
+        </Style>
+
+        <Style Selector="Button.TransparentButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontWeight" Value="200"/>
+        </Style>
+    </Application.Styles>
+</Application>
