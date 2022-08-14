@@ -1,5 +1,7 @@
 # Stride Launcher Avalonia
 
+![Launcher screenshot](launcher.png)
+
 This is my attempt to port all of the [Stride3D engine](https://www.stride3d.net/) launcher code so that it works on all desktop platforms using AvaloniaUI.
 
 ## Building 
