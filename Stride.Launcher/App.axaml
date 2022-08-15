@@ -9,46 +9,46 @@
     <Application.Resources>
         <ResourceDictionary>
             <Bitmap x:Key="ImageBackground">
-                <x:Arguments><x:String>Assets/img/Robot.jpg</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/robot.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageIssues">
-                <x:Arguments><x:String>Assets/img/issues.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/issues.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageForums">
-                <x:Arguments><x:String>Assets/img/chat-16.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/chat.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageChat">
-                <x:Arguments><x:String>Assets/img/discord.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/discord.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageGithub">
-                <x:Arguments><x:String>Assets/img/github.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/github.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageRoadmap">
-                <x:Arguments><x:String>Assets/img/roadmap.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/roadmap.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageSwitchVersion">
-                <x:Arguments><x:String>Assets/img/switch-version.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/switch-version.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageVisualStudio">
-                <x:Arguments><x:String>Assets/img/visual-studio.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/visual-studio.png</x:String></x:Arguments>
             </Bitmap>
             <Bitmap x:Key="ImageProjects">
-                <x:Arguments><x:String>Assets/img/recent-projects.png</x:String></x:Arguments>
+                <x:Arguments><x:String>Assets/Images/recent-projects.png</x:String></x:Arguments>
             </Bitmap>
-            <Image Width="16" Height="16" x:Key="EditorIcon" Source="Assets/img/EditorIcon.png" />
-            <Image Width="16" Height="16" x:Key="ImageShowcase" Source="Assets/img/showcase.png"/>
-            <Image Width="16" Height="16" x:Key="ImageSurvey" Source="Assets/img/survey.png"/>
-            <Image Width="24" Height="24" x:Key="ImageTwitter" Source="Assets/img/twitter_bird_24.png"/>
-            <Image Width="24" Height="24" x:Key="ImageFacebook" Source="Assets/img/facebook_24.png"/>
-            <Image Width="24" Height="24" x:Key="ImageReddit" Source="Assets/img/reddit_24.png"/>
-            <Image Width="24" Height="24" x:Key="ImageOpenCollective" Source="Assets/img/opencollective-24.png"/>
+            <Image Width="16" Height="16" x:Key="EditorIcon" Source="Assets/Images/editorIcon.png" />
+            <Image Width="16" Height="16" x:Key="ImageShowcase" Source="Assets/Images/showcase.png"/>
+            <Image Width="16" Height="16" x:Key="ImageSurvey" Source="Assets/Images/survey.png"/>
+            <Image Width="24" Height="24" x:Key="ImageTwitter" Source="Assets/Images/twitter.png"/>
+            <Image Width="24" Height="24" x:Key="ImageFacebook" Source="Assets/Images/facebook.png"/>
+            <Image Width="24" Height="24" x:Key="ImageReddit" Source="Assets/Images/reddit.png"/>
+            <Image Width="24" Height="24" x:Key="ImageOpenCollective" Source="Assets/Images/opencollective.png"/>
             
-            <Image Width="26" Height="26" x:Key="ImageDownload" Source="Assets/img/download-26-dark.png"/>
-            <Image Width="26" Height="26" x:Key="ImageUpdate" Source="Assets/img/update.png"/>
-            <Image Width="26" Height="26" x:Key="ImageDelete" Source="Assets/img/delete-26-dark.png"/>
-            <Image Width="16" Height="16" x:Key="ImageUpgrade" Source="Assets/img/upgrade-16.png"/>
-            <Image Width="26" Height="26" x:Key="ImageReleaseNotes" Source="Assets/img/note-26-dark.png"/>
-            <Image Width="26" Height="26" x:Key="ImageListVersions" Source="Assets/img/list-26.png"/>
+            <Image Width="26" Height="26" x:Key="ImageDownload" Source="Assets/Images/download.png"/>
+            <Image Width="26" Height="26" x:Key="ImageUpdate" Source="Assets/Images/update.png"/>
+            <Image Width="26" Height="26" x:Key="ImageDelete" Source="Assets/Images/delete.png"/>
+            <Image Width="16" Height="16" x:Key="ImageUpgrade" Source="Assets/Images/upgrade.png"/>
+            <Image Width="26" Height="26" x:Key="ImageReleaseNotes" Source="Assets/Images/note.png"/>
+            <Image Width="26" Height="26" x:Key="ImageListVersions" Source="Assets/Images/list.png"/>
             <Thickness x:Key="TileBorderThickness">15</Thickness>
             <SolidColorBrush x:Key="TileBorderBrush" Color="Transparent"/>
             <SolidColorBrush x:Key="TileAlphaBackgroundBrush" Color="#C0434343"/>
